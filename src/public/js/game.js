@@ -7,6 +7,14 @@ var game = {
         0, 0, 0, 0,
         0, 0, 0, 0
     ],
+    reset: function() {
+        this.cells = [
+            0, 0, 0, 0,
+            0, 0, 0, 0,
+            0, 0, 0, 0,
+            0, 0, 0, 0
+        ];
+    },
     getFreeCells: function() {
         let freeCells = [];
         for (let i = 0; i < this.cells.length; i++) {
@@ -21,8 +29,6 @@ var game = {
         let randomCell = freeCells[Math.floor(Math.random() * freeCells.length)];
         let spawnNumber = Math.random() > 0.3 ? 2 : 4;
         this.cells[randomCell] = spawnNumber;
-        console.dir(cells);
-        console.log(randomCell);
         this.moved = false;
     },
     shift: function(stationary, incoming) {
@@ -46,7 +52,6 @@ var game = {
                 for (let col = 0; col < 3; col++) {
                     let currentCell = (row * 4) + col;
                     let nextCell = currentCell + 1;
-                    console.dir(this);
                     this.shift(currentCell, nextCell);
                 }
             }
@@ -102,3 +107,5 @@ var game = {
         }
     }
 }
+
+module.exports = game;
