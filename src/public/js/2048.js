@@ -1,13 +1,13 @@
 var moved = false;
 var collided = false;
 const cells = document.getElementsByClassName('cell');
+
 const moveFunctions = {
     'ArrowLeft': moveLeft,
     'ArrowRight': moveRight,
     'ArrowUp': moveUp,
     'ArrowDown': moveDown
 };
-
 document.addEventListener(
     "keydown",
     (event) => {
@@ -17,10 +17,16 @@ document.addEventListener(
         }
         if (moved) {
             spawn();
+            updateHtml();
         }
     },
     false
 );
+function updateHtml(htmlCells, logicCells) {
+    for(let i = 0; i < logicCells.length; i++) {
+        htmlCells[i].innerHTML = logicCells[i];
+    }
+}
 function getFreeCells() {
     let freeCells = [];
     for (let i = 0; i < cells.length; i++) {
