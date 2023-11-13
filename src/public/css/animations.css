@@ -1,71 +1,96 @@
-.left {
+.shiftable {
     position: relative;
-    animation-name: animationLeft;
     animation-duration: 0.2s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
 }
 
-@keyframes animationLeft {
-    0% {
-        left: 0px;
-    }
-
-    100% {
-        left: -8em;
-    }
+.left {
+    animation-name: shift-left;
 }
 
 .right {
-    position: relative;
-    animation-name: animationRight;
-    animation-duration: 0.2s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
+    animation-name: shift-right;
 }
 
-@keyframes animationRight {
+.up {
+    animation-name: shift-up;
+}
+
+.down {
+    animation-name: shift-down;
+}
+
+@keyframes shift-left {
     0% {
         left: 0px;
     }
 
+    33% {
+        left: -0.1em
+    }
+
+    67% {
+        left: -0.8
+    }
+
     100% {
-        left: 8em;
+        left: -2em;
     }
 }
 
-.up {
-    position: relative;
-    animation-name: animationUp;
-    animation-duration: 0.2s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
+
+@keyframes shift-right {
+    0% {
+        left: 0px;
+    }
+
+    33% {
+        left: 0.1em
+    }
+
+    67% {
+        left: 0.8
+    }
+
+    100% {
+        left: 2em;
+    }
 }
 
-@keyframes animationUp {
+
+@keyframes shift-up {
     0% {
         top: 0px;
     }
 
+    33% {
+        top: -0.1em
+    }
+
+    67% {
+        top: -0.8
+    }
+
     100% {
-        top: -8em;
+        top: -2em;
     }
 }
 
-.down {
-    position: relative;
-    animation-name: animationDown;
-    animation-duration: 0.2s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-}
-
-@keyframes animationDown {
+@keyframes shift-down {
     0% {
         top: 0px;
     }
 
+    33% {
+        top: 0.1em
+    }
+
+    67% {
+        top: 0.8
+    }
+
     100% {
-        top: 8em;
+        top: 2em;
     }
 }

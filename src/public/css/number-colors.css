@@ -1,0 +1,48 @@
+
+.n-2 {
+    background-color: blue;
+}
+
+.n-4 {
+    background-color: violet;
+}
+
+.n-8 {
+    background-color: blueviolet;
+}
+
+.n-16 {
+    background-color: rebeccapurple;
+}
+
+.n-32 {
+    background-color: purple;
+}
+
+.n-64 {
+    background-color: darkorchid;
+}
+
+.n-128 {
+    background-color: darkred;
+}
+
+.n-256 {
+    background-color: red;
+}
+
+.n-512 {
+    background-color: orangered;
+}
+
+.n-1024 {
+    background-color: darkorange;
+}
+
+.n-2048 {
+    background-color: orange;
+}
+
+.n-4096 {
+    background-color: yellow;
+}

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/animations.css" rel="stylesheet" />
+    <link href="css/number-colors.css" rel="stylesheet" />
     <title>2048</title>
 </head>
 
@@ -16,58 +17,63 @@
         <div class="filler"></div>
         <div class="field" id="field">
             <div class="cell">
-                <div class="number"></div>
+                <div class="number shiftable"></div>
             </div>
             <div class="cell">
-                <div class="number"></div>
+                <div class="number shiftable"></div>
             </div>
             <div class="cell">
-                <div class="number"></div>
+                <div class="number shiftable"></div>
             </div>
             <div class="cell">
-                <div class="number"></div>
-            </div>
-
-            <div class="cell">
-                <div class="number"></div>
-            </div>
-            <div class="cell">
-                <div class="number"></div>
-            </div>
-            <div class="cell">
-                <div class="number"></div>
-            </div>
-            <div class="cell">
-                <div class="number"></div>
+                <div class="number shiftable"></div>
             </div>
 
             <div class="cell">
-                <div class="number"></div>
+                <div class="number shiftable"></div>
             </div>
             <div class="cell">
-                <div class="number"></div>
+                <div class="number shiftable"></div>
             </div>
             <div class="cell">
-                <div class="number"></div>
+                <div class="number shiftable"></div>
             </div>
             <div class="cell">
-                <div class="number"></div>
+                <div class="number shiftable"></div>
             </div>
 
             <div class="cell">
-                <div class="number"></div>
+                <div class="number shiftable"></div>
             </div>
             <div class="cell">
-                <div class="number"></div>
+                <div class="number shiftable"></div>
             </div>
             <div class="cell">
-                <div class="number"></div>
+                <div class="number shiftable"></div>
             </div>
             <div class="cell">
-                <div class="number"></div>
+                <div class="number shiftable"></div>
+            </div>
+
+            <div class="cell">
+                <div class="number shiftable"></div>
+            </div>
+            <div class="cell">
+                <div class="number shiftable"></div>
+            </div>
+            <div class="cell">
+                <div class="number shiftable"></div>
+            </div>
+            <div class="cell">
+                <div class="number shiftable"></div>
             </div>
         </div>
-        <div class="filler"></div>
+        <div class="filler">
+            <div class="menu">
+                <div class="menu-item score"><span class="label">Score:</span> <span id="score"></span></div>
+                <div class="menu-item restart"><button class="button" id="restart">Restart</button></div>
+            </div>
+        </div>
         <div class="filler filler-wide"></div>
     </div>
     <script src="js/game.js"></script>

@@ -1,6 +1,7 @@
 var game = {
-    moved: false,
+    moved: [],
     collided: false,
+    score: 0,
     cells: [
         0, 0, 0, 0,
         0, 0, 0, 0,
@@ -14,6 +15,7 @@ var game = {
             0, 0, 0, 0,
             0, 0, 0, 0
         ];
+        this.score = 0;
     },
     getFreeCells: function() {
         let freeCells = [];
@@ -29,24 +31,28 @@ var game = {
         let randomCell = freeCells[Math.floor(Math.random() * freeCells.length)];
         let spawnNumber = Math.random() > 0.3 ? 2 : 4;
         this.cells[randomCell] = spawnNumber;
-        this.moved = false;
     },
     shift: function(stationary, incoming) {
         if (this.cells[stationary] == 0) {
             if (this.cells[incoming] !== 0) {
                 this.cells[stationary] = this.cells[incoming];
                 this.cells[incoming] = 0;
-                this.moved = true;
+                this.moved.push(incoming);
             }
         }
         else if (!this.collided && this.cells[stationary] === this.cells[incoming]) {
-            this.cells[stationary] = this.cells[stationary] + this.cells[incoming];
+            const newCellValue = this.cells[stationary] + this.cells[incoming];
+            if (newCellValue > this.score) {
+                this.score = newCellValue;
+            }
+            this.cells[stationary] = newCellValue;
             this.cells[incoming] = 0;
             this.collided = true;
-            this.moved = true;
+            this.moved.push(incoming);
         }
     },
     moveLeft: function() {
+        this.moved = [];
         for (let row = 0; row < 4; row++) {
             for (let i = 0; i < 3; i++) {
                 for (let col = 0; col < 3; col++) {
@@ -57,11 +63,12 @@ var game = {
             }
             this.collided = false;
         }
-        if(this.moved) {
+        if(this.moved.length) {
             this.spawn();
         }
     },
     moveRight: function() {
+        this.moved = [];
         for (let row = 0; row < 4; row++) {
             for (let i = 0; i < 3; i++) {
                 for (let col = 3; col > 0; col--) {
@@ -72,11 +79,12 @@ var game = {
             }
             this.collided = false;
         }
-        if(this.moved) {
+        if(this.moved.length) {
             this.spawn();
         }
     },
     moveUp: function() {
+        this.moved = [];
         for (let col = 0; col < 4; col++) {
             for (let i = 0; i < 3; i++) {
                 for (let row = 0; row < 3; row++) {
@@ -87,11 +95,12 @@ var game = {
             }
             this.collided = false;
         }
-        if(this.moved) {
+        if(this.moved.length) {
             this.spawn();
         }
     },
     moveDown: function() {
+        this.moved = [];
         for (let col = 0; col < 4; col++) {
             for (let i = 0; i < 3; i++) {
                 for (let row = 3; row > 0; row--) {
@@ -102,7 +111,7 @@ var game = {
             }
             this.collided = false;
         }
-        if(this.moved) {
+        if(this.moved.length) {
             this.spawn();
         }
     }
