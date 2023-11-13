@@ -1,0 +1,71 @@
+.left {
+    position: relative;
+    animation-name: animationLeft;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes animationLeft {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: -8em;
+    }
+}
+
+.right {
+    position: relative;
+    animation-name: animationRight;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes animationRight {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: 8em;
+    }
+}
+
+.up {
+    position: relative;
+    animation-name: animationUp;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes animationUp {
+    0% {
+        top: 0px;
+    }
+
+    100% {
+        top: -8em;
+    }
+}
+
+.down {
+    position: relative;
+    animation-name: animationDown;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes animationDown {
+    0% {
+        top: 0px;
+    }
+
+    100% {
+        top: 8em;
+    }
+}
