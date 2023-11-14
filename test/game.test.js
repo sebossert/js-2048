@@ -1,16 +1,5 @@
 var game = require('../src/public/js/game.js');
 
-function debugCells(cells) {
-    let cellString = '';
-    for(let r = 0; r < 4; r++) {
-        for(let c = 0; c < 4; c++) {
-            cellString += cells[r*4+c] + ' ';
-        }
-        cellString += "\n";
-    }
-    console.log(cellString);
-}
-
 test("game.spawn", () => {
     game.reset();
     let before = 0;
@@ -33,7 +22,6 @@ test("game.moveLeft", () => {
     game.moveLeft();
     expect(game.cells[0]).toEqual(4);
     expect(game.cells[1]).toEqual(0);
-    debugCells(game.cells);
 });
 test("game.moveRight", () => {
     game.reset();
@@ -43,7 +31,6 @@ test("game.moveRight", () => {
     expect(game.cells[5]).toEqual(0);
     expect(game.cells[6]).toEqual(0);
     expect(game.cells[7]).toEqual(4);
-    debugCells(game.cells);
 });
 test("game.moveUp", () => {
     game.reset();
@@ -56,7 +43,6 @@ test("game.moveUp", () => {
     expect(game.cells[4]).toEqual(4);
     expect(game.cells[8]).toEqual(0);
     expect(game.cells[12]).toEqual(0);
-    debugCells(game.cells);
 });
 test("game.moveDown", () => {
     game.reset();
@@ -67,7 +53,6 @@ test("game.moveDown", () => {
     game.moveDown();
     expect(game.cells[9]).toEqual(4);
     expect(game.cells[13]).toEqual(4);
-    debugCells(game.cells);
 });
 test("game.getFreeCells", () => {
     game.reset();
