@@ -1,11 +1,21 @@
-### readme js-2048
+# readme js-2048
+
+ 2048 game in javascript with express server to run.
+
+### Run
+
+> npm run dev
+
+Access under http://localhost:8080
+
+### Play Directly
+
+https://sebossert.github.io/js-2048/
 
 ## TODO
 - Game Over
-- Better Animations -> probably whole rework to trigger animations from game logic
+- Smoother Animations
 - Cleanup
 - Tests
--- UI ?
--- Input Handling ?
--- more game states
--- moved and merged cells correctly filled
+- - more game states
+- - moved and merged cells correctly filled

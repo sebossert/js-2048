@@ -6,7 +6,6 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "nodemon src/app.js",
-    "prd": "NODE_ENV=production node src/app.js",
     "test": "jest --runInBand"
   },
   "author": "seboss",
