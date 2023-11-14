@@ -9,8 +9,8 @@ html {
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 2em min-content auto;
-    grid-template-rows: 2em min-content auto;
+    grid-template-columns: 4em min-content auto;
+    grid-template-rows: 4em min-content auto;
     top: 0px;
     left: 0px;
     position: absolute;
@@ -26,7 +26,7 @@ html {
 }
 
 .button {
-    border-width: 0.2em;
+    border-width: 0.4em;
     border-style: solid;
     border-radius: 15%;
     border-color: aquamarine;
@@ -63,13 +63,20 @@ html {
 
 .cell {
     background-color: aquamarine;
-    width: 2em;
-    height: 2em;
+    width: 4em;
+    height: 4em;
     border-radius: 25%;
-    font-size: 2em;
-    display: grid;
+}
+
+.number-container {
+    border-radius: 25%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
 }
 
 .number {
     margin: auto;
+    font-size: 2em;
 }
