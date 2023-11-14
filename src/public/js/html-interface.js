@@ -1,5 +1,3 @@
-const game = require("./game");
-
 const cells = document.getElementsByClassName('number');
 const scoreField = document.getElementById('score');
 const animationDuration = getAnimationDuration();
@@ -23,14 +21,14 @@ document.getElementById('restart').addEventListener(
 document.addEventListener(
     "keydown",
     (event) => {
-        if(blockInput) {
-        //return;
+        if (blockInput) {
+            //return;
         }
         blockInput = true;
         const keyName = event.key;
         if (moveFunctions.hasOwnProperty(keyName)) {
             moveFunctions[keyName]();
-            if(game.movedCells.length) {
+            if (game.movedCells.length) {
                 game.spawn();
             }
             processMove(keyName);
@@ -46,7 +44,7 @@ function processMove(keyName) {
 }
 
 function animateMove(direction) {
-    for(let i = 0; i < game.movedCells.length; i++) {
+    for (let i = 0; i < game.movedCells.length; i++) {
         const cell = game.movedCells[i];
         cells[cell].parentElement.classList.add(direction);
     }
@@ -59,7 +57,7 @@ function animateMove(direction) {
 
 function wipeClass(className) {
     const cellsToWipe = document.getElementsByClassName(className);
-    while(cellsToWipe.length) {
+    while (cellsToWipe.length) {
         cellsToWipe[0].classList.remove(className);
     }
 }
@@ -69,8 +67,8 @@ function updateHtml(game, cells, scoreField) {
     scoreField.innerHTML = game.score;
 }
 
-function updateCells(htmlCells, gameCells){
-    for(let i = 0; i < gameCells.length; i++) {
+function updateCells(htmlCells, gameCells) {
+    for (let i = 0; i < gameCells.length; i++) {
         htmlCells[i].parentElement.classList.remove('n-' + htmlCells[i].innerHTML);
         htmlCells[i].innerHTML = gameCells[i] === 0 ? '' : gameCells[i];
         htmlCells[i].parentElement.classList.add('n-' + gameCells[i]);
@@ -78,12 +76,12 @@ function updateCells(htmlCells, gameCells){
 }
 
 function getAnimationDuration() {
-    for(const sheet of document.styleSheets) {
-        if(sheet.href.substr(-14) == 'animations.css') {
-            for(const rule of sheet.cssRules) {
-                if(rule.selectorText == '.shiftable') {
+    for (const sheet of document.styleSheets) {
+        if (sheet.href.substr(-14) == 'animations.css') {
+            for (const rule of sheet.cssRules) {
+                if (rule.selectorText == '.shiftable') {
                     const durationString = rule.style['animation-duration'];
-                    const duration = 1000 * durationString.replace('s','');
+                    const duration = 1000 * durationString.replace('s', '');
                     return duration;
                 }
             }

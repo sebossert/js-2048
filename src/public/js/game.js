@@ -1,4 +1,4 @@
-var game = {
+const game = {
     movedCells: [],
     mergedCells: [],
     merged: false,
