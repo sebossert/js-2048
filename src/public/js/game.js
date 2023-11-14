@@ -34,7 +34,6 @@ var game = {
         this.cells[randomCell] = spawnNumber;
     },
     shift: function(stationary, incoming) {
-        console.dir(incoming + ' -> ' + stationary);
         if (this.cells[stationary] == 0) {
             if (this.cells[incoming] !== 0) {
                 this.cells[stationary] = this.cells[incoming];
@@ -71,9 +70,6 @@ var game = {
                 }
             }
         }
-        if(this.movedCells.length) {
-            this.spawn();
-        }
     },
     moveRight: function() {
         this.movedCells = [];
@@ -87,9 +83,6 @@ var game = {
                     break;
                 }
             }
-        }
-        if(this.movedCells.length) {
-            this.spawn();
         }
     },
     moveUp: function() {
@@ -105,9 +98,6 @@ var game = {
                 }
             }
         }
-        if(this.movedCells.length) {
-            this.spawn();
-        }
     },
     moveDown: function() {
         this.movedCells = [];
@@ -121,9 +111,6 @@ var game = {
                     break;
                 }       
             }
-        }
-        if(this.movedCells.length) {
-            this.spawn();
         }
     }
 }

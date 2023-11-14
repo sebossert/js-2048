@@ -1,3 +1,5 @@
+const game = require("./game");
+
 const cells = document.getElementsByClassName('number');
 const scoreField = document.getElementById('score');
 const animationDuration = getAnimationDuration();
@@ -28,6 +30,9 @@ document.addEventListener(
         const keyName = event.key;
         if (moveFunctions.hasOwnProperty(keyName)) {
             moveFunctions[keyName]();
+            if(game.movedCells.length) {
+                game.spawn();
+            }
             processMove(keyName);
         }
     },
