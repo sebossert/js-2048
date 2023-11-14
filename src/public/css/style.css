@@ -25,20 +25,23 @@ html {
     margin: 1em;
 }
 
+.score {
+    font-size: 1.5em;
+}
+
 .button {
-    border-width: 0.4em;
+    border-width: 0.5em;
     border-style: solid;
-    border-radius: 15%;
     border-color: aquamarine;
     background-color: lightblue;
     font-weight: bold;
     padding: 1em;
     color: white;
+    font-size: 1.5em;
 }
 
 .button:hover {
     background-color: lightskyblue;
-    font-weight: bolder;
 }
 
 .filler {
