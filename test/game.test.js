@@ -34,19 +34,24 @@ test("game.moveRight", () => {
 });
 test("game.moveUp", () => {
     game.reset();
-    game.cells[0] = 2;
-    game.cells[4] = 2;
+    game.cells[0] = 4;
+    game.cells[4] = 4;
+    game.cells[8] = 2;
+    game.cells[12] = 2;
     game.moveUp();
-    expect(game.cells[0]).toEqual(4);
-    expect(game.cells[4]).toEqual(0);
+    expect(game.cells[0]).toEqual(8);
+    expect(game.cells[4]).toEqual(4);
+    expect(game.cells[8]).toEqual(0);
+    expect(game.cells[12]).toEqual(0);
 });
 test("game.moveDown", () => {
     game.reset();
+    game.cells[1] = 2;
     game.cells[5] = 2;
     game.cells[9] = 2;
     game.cells[13] = 2;
     game.moveDown();
-    expect(game.cells[9]).toEqual(2);
+    expect(game.cells[9]).toEqual(4);
     expect(game.cells[13]).toEqual(4);
 });
 test("game.getFreeCells", () => {

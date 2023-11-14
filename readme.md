@@ -4,6 +4,8 @@
 - Game Over
 - Better Animations -> probably whole rework to trigger animations from game logic
 - Cleanup
-- Tests?
--- UI
--- Input Handling
+- Tests
+-- UI ?
+-- Input Handling ?
+-- more game states
+-- moved and merged cells correctly filled
