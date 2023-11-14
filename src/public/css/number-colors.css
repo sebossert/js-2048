@@ -1,48 +1,48 @@
 
 .n-2 {
-    background-color: blue;
+    background-color: #D6DC6A;
 }
 
 .n-4 {
-    background-color: violet;
+    background-color: #C6CE3B;
 }
 
 .n-8 {
-    background-color: blueviolet;
+    background-color: #7DCE3B;
 }
 
 .n-16 {
-    background-color: rebeccapurple;
+    background-color: #3BCE8B;
 }
 
 .n-32 {
-    background-color: purple;
+    background-color: #3BC6CE;
 }
 
 .n-64 {
-    background-color: darkorchid;
+    background-color: #3B7DCE;
 }
 
 .n-128 {
-    background-color: darkred;
+    background-color: #423BCE;
 }
 
 .n-256 {
-    background-color: red;
+    background-color: #8B3BCE;
 }
 
 .n-512 {
-    background-color: orangered;
+    background-color: #CE3BC6;
 }
 
 .n-1024 {
-    background-color: darkorange;
+    background-color: #CE3B7D;
 }
 
 .n-2048 {
-    background-color: orange;
+    background-color: #CE423B;
 }
 
 .n-4096 {
-    background-color: yellow;
+    background-color: #CE8B3B;
 }
